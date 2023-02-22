@@ -1,0 +1,15 @@
+# GO
+*.exe
+*.exe~
+*.dll
+*.so
+*.dylib
+*.test
+*.out
+
+# IntelliJ
+.idea
+cmake-build-*/
+*.iws
+out/
+.idea_modules/

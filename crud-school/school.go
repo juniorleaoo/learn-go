@@ -16,13 +16,18 @@ type School struct {
 var schools []School
 
 func main() {
+	router := setupRouter()
+	router.Run(":8080")
+}
+
+func setupRouter() *gin.Engine {
 	router := gin.Default()
 	router.GET("/schools", listSchools)
 	router.POST("/schools", createSchool)
 	router.GET("/schools/:id", getSchool)
 	router.PUT("/schools/:id", updateSchool)
 	router.DELETE("/schools/:id", deleteSchool)
-	router.Run(":8080")
+	return router
 }
 
 func listSchools(context *gin.Context) {

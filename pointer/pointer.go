@@ -12,4 +12,13 @@ func main() {
 	fmt.Println(i)
 	fmt.Println("memory address", p)
 	fmt.Println("value", *p)
+
+	num := 1
+	increment(&num)
+	fmt.Println(num)
+
+}
+
+func increment(num *int) {
+	*num++
 }

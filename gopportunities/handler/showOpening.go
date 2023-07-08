@@ -7,6 +7,17 @@ import (
 	"net/http"
 )
 
+// @BasePath /api/v1
+// @Summary Show opening
+// @Description Show a job opening
+// @Tags Openings
+// @Accept json
+// @Produces json
+// @Param id path int true "Opening identification"
+// @Success 200 {object} ShowOpeningResponse
+// @Failure 400 {object} ErrorResponse
+// @Failure 404 {object} ErrorResponse
+// @Router /opening/:id [get]
 func ShowOpening(ctx *gin.Context) {
 	id := ctx.Param("id")
 

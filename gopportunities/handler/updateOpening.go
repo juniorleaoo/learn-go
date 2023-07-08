@@ -7,6 +7,18 @@ import (
 	"net/http"
 )
 
+// @BasePath /api/v1
+// @Summary Update opening
+// @Description Update a job opening
+// @Tags Openings
+// @Accept json
+// @Produces json
+// @Param id path int true "Opening identification"
+// @Success 200 {object} UpdateOpeningResponse
+// @Failure 400 {object} ErrorResponse
+// @Failure 404 {object} ErrorResponse
+// @Failure 500 {object} ErrorResponse
+// @Router /opening/:id [put]
 func UpdateOpening(ctx *gin.Context) {
 	id := ctx.Param("id")
 	if id == "" {

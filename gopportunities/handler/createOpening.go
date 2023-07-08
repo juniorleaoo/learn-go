@@ -6,6 +6,17 @@ import (
 	"net/http"
 )
 
+// @BasePath /api/v1
+// @Summary Create opening
+// @Description Create a new job opening
+// @Tags Openings
+// @Accept json
+// @Produces json
+// @Param request body CreateOpeningRequest true "Request body"
+// @Success 200 {object} CreateOpeningResponse
+// @Failure 400 {object} ErrorResponse
+// @Failure 500 {object} ErrorResponse
+// @Router /opening/:id [post]
 func CreateOpening(ctx *gin.Context) {
 	var request CreateOpeningRequest
 	ctx.BindJSON(&request)

@@ -12,7 +12,7 @@ var (
 func main() {
 	logger = config.GetLogger("main")
 
-	router := config.Init()
+	err := config.Init()
 	if err != nil {
 		logger.Error(err)
 		panic(err)

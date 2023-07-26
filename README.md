@@ -113,3 +113,12 @@ slice[2:4] //exibe os valores do slice entre os índices 2 e 3
 ```
 
 Para deletar um valor no slice, é necessário recriar um novo slice 
+
+
+### Testes
+
+```shell
+go test
+go test -coverprofile=c.out
+go tool cover -html=c.out
+```
